@@ -1,0 +1,424 @@
+{
+	"info": {
+		"_postman_id": "72320461-2d98-4917-81ff-a87699c2ed35",
+		"name": "Dotz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Api",
+			"item": [
+				{
+					"name": "Usuario",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6InRhcmNpc2lvLmJlcmV0dGFAZ21haWwuY29tIiwianRpIjoiNjI0YzllNjktMGEwNS00ZDIxLTk2MzAtOWMyZGUzNjI3MjFiIiwiZXhwIjoxNjE0NjU0NDc0fQ.o1Yg7SpLOF0Pu7FORA2g5psyLEtJMZ1gj7egN56VWVk",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/api/usuarios/",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"usuarios",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/api/usuarios/1",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"usuarios",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Tarcísio\",\r\n    \"email\": \"tarcisio.beretta@gmail.com\",\r\n    \"senha\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/api/usuarios/",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"usuarios",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Tarcísio\",\r\n    \"email\": \"tarcisio.beretta@gmail.com\",\r\n    \"senha\": \"123\",\r\n    \"saldo\": 50\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/api/usuarios/1",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"usuarios",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/api/usuarios/2",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"usuarios",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Consultar extrato",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": null
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Produto",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/api/produtos/",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"produtos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get by ID",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/api/produtos/1",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"produtos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nome\": \"Bolacha Bauduco\",\r\n    \"descricao\": \"Bolacha Bauduco de chocolate 75g\",\r\n    \"pontos\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/api/produtos/",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"produtos",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "    {\r\n        \"id\": 2,\r\n        \"nome\": \"Bolacha Bauduco\",\r\n        \"descricao\": \"Bolacha Bauduco de chocolate 75g\",\r\n        \"pontos\": 7\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/api/produtos/2",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"produtos",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/api/produtos/3",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"produtos",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Autenticação",
+					"item": [
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable('token', jsonData.token);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"tarcisio.beretta@gmail.com\",\r\n    \"senha\": \"123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/api/auth/login",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Trocas",
+					"item": [
+						{
+							"name": "Get",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{apiUrl}}/api/trocas/",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"trocas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Produtos\": [\r\n        {\r\n            \"ProdutoId\": 1,\r\n            \"Quantidade\": 5\r\n        },\r\n        {\r\n            \"ProdutoId\": 2,\r\n            \"Quantidade\": 2\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/api/trocas/",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"trocas",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Produtos\": [\r\n        {\r\n            \"ProdutoId\": 1,\r\n            \"Quantidade\": 2\r\n        },\r\n        {\r\n            \"ProdutoId\": 2,\r\n            \"Quantidade\": 2\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/api/trocas/1",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"api",
+										"trocas",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
